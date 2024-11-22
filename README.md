@@ -44,6 +44,12 @@ DATABASE_NAME=database_name
 
    Le backend sera accessible sur `http://localhost:PORT`.
 
+   Si vous souhaitez lancer les seeds pour remplir la base de données avec des données initiales, vous pouvez le faire avec la commande suivante :
+
+   ```bash
+   npm run seed
+   ```
+
 ## Frontend (React.js)
 
 1. **Accédez au dossier `client`** :
