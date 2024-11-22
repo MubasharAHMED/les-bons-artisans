@@ -36,7 +36,7 @@ const makeRoutesSign = ({ app }) => {
       const db = await getDb()
       const users = db.collection("users")
 
-      const user = await usersCollection.findOne({ email })
+      const user = await users.findOne({ email })
       if (!user) {
         return res.status(401).send({ error: "Invalid credentials" })
       }
