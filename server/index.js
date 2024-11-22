@@ -1,10 +1,15 @@
 import "dotenv/config"
 import express from "express"
+import cors from "cors"
 import seedDb from "./db/seed.js"
+import makeRoutesProducts from "./routes/makeRoutesProducts.js"
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
+
+makeRoutesProducts({ app })
 
 const startApp = async () => {
   const shouldSeed = process.argv.includes("--seed")
