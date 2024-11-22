@@ -29,7 +29,7 @@ const makeRoutesSign = ({ app }) => {
     }
   })
 
-  post("/sign-in", validateSignIn, async (req, res) => {
+  app.post("/sign-in", validateSignIn, async (req, res) => {
     const { email, password } = req.body
 
     try {
